@@ -88,6 +88,7 @@ def run():
                     df[f"ete_from_{L}"] = np.nan
                     df[f"lag_from_{L}"] = np.nan
                     df[f"ete_hr_from_{L}"] = np.nan
+                    df[f"ete_std_from_{L}"] = np.nan
                     continue
                 sub = sub.rename(columns={
                     "asof": "timestamp",
