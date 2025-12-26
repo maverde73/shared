@@ -45,7 +45,7 @@ def run():
         df = df.sort_index()
         df["timestamp"] = df.index
         df["asset"] = asset
-
+        df = df.reset_index(drop=True)
         # targets
         df["target_ret_30m"] = df["logret"].shift(-H_30M)
         df["target_ret_1h"] = df["logret"].shift(-H_1H)
